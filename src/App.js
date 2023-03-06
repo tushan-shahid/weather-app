@@ -21,20 +21,22 @@ function App() {
     fetchWeather();
   }, [query, units]);
   return (
-    <div className="p-6  max-w-screen  bg-gradient-to-br from-cyan-300 to-blue-700  shadow-gray-400 h-full">
-      <TopButtons setQuery={setQuery} />
-      <SearchInputs setQuery={setQuery} units={units} setUnits={setUnits} />
+    <div class="items-center justify-center h-screen m-10 p-2">
+      <div className="p-6  bg-gradient-to-br from-cyan-300 to-blue-700  shadow-gray-400 h-full">
+        <TopButtons setQuery={setQuery} />
+        <SearchInputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
-      {weather && (
-        <>
-          <div className="rounded-lg shadow-lg bg-blue-400 p-4 ">
-            <LocalTime weather={weather} />
-            <TempDets weather={weather} />
-          </div>
-          <Forecast title="hourly weather" items={weather.hourly} />
-          <Forecast title="daily weather" items={weather.daily} />
-        </>
-      )}
+        {weather && (
+          <>
+            <div className="rounded-lg shadow-lg bg-blue-400 p-4 ">
+              <LocalTime weather={weather} />
+              <TempDets weather={weather} />
+            </div>
+            <Forecast title="hourly weather" items={weather.hourly} />
+            <Forecast title="daily weather" items={weather.daily} />
+          </>
+        )}
+      </div>
     </div>
   );
 }
