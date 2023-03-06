@@ -21,8 +21,8 @@ function App() {
     fetchWeather();
   }, [query, units]);
   return (
-    <div class="items-center justify-center h-screen m-10 p-2">
-      <div className="p-6  bg-gradient-to-br from-cyan-300 to-blue-700  shadow-gray-400 h-full">
+    <div class="items-center justify-center flex p-4 bg-blue-200">
+      <div className="p-6  bg-gradient-to-br from-cyan-300 to-blue-700  shadow-gray-400 ">
         <TopButtons setQuery={setQuery} />
         <SearchInputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
